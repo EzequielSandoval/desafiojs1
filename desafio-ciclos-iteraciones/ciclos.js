@@ -1,6 +1,10 @@
 alert("Programa para cargar datos de una persona")
 
 let personas = parseInt(prompt("Ingrese para cuantas personas desea cargar datos [max 3]").trim())
+// inicialzacion de variables 
+let nombre = ""
+let dni = 0
+let telefono = 0
 
 if ((personas <= 3) && (personas > 0)) {
 
@@ -8,14 +12,14 @@ if ((personas <= 3) && (personas > 0)) {
 
         // carga de datos
         do {
-            nombre = prompt("Ingrese nombre y apellido")
-        } while (!isNaN(nombre))
+             nombre = prompt("Ingrese nombre y apellido")
+        } while (!isNaN(nombre))   
         do {
-            dni = parseInt(prompt("Ingrese un dni").trim())
-        } while (dni == NaN)
+             dni = parseInt(prompt("Ingrese un dni").trim())
+        } while (isNaN(dni))    // dni == NaN > isNaN (dni)
         do {
             telefono = parseInt(prompt("Ingrese un telefono").trim())
-        } while (telefono == NaN)
+        } while (isNaN(telefono))   // telefono == NaN > isNaN (telefono)
 
         // datos por consola
 
