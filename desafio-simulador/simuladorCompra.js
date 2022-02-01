@@ -6,6 +6,7 @@ let costeCopia = 0
 let subtotal = 0
 let precioFinal = 0
 let descuentos = 0
+let calcDescuentos = 0
 let respaldo = ""
 let certOpcion = ""
 let sistema = ""
@@ -61,7 +62,7 @@ if (sistema == "linux") {
         alert("no se agrego respaldo")
         respaldo = "NO"
     }
-} else if (sistema = "windows") {
+} else {
     alert("Este sistema operativo no tiene sistema de respaldo")
     respaldo = "no posee"
 }
@@ -73,14 +74,35 @@ do {
 if (certificado == "s") {
     costeCertificado = 1000
     certOpcion = "SI"
-} else if (certificado == "n") {
+} else {
     certOpcion = "NO"
 }
 
 // procesamiento de datos
+
 subtotal = costeMeses + costeCopia + costeCertificado
 totalImp = impIva(subtotal)
 calculoTotal = totalImp + subtotal
+
+
+// ARRAY
+
+const totales = []
+
+totales.push(
+    { 'costeMeses': costeMeses },
+    { 'costeCopia': costeCopia },
+    { 'costeCertificado': costeCertificado },
+    { 'totalImp': totalImp },
+    { 'calculoTotal': calculoTotal }
+)
+
+// FIN ARRAY
+
+
+
+
+
 
 // calculo descuentos
 descuento = prompt("Si tiene codigo de descuento ingreselo a continuacion: ")
@@ -88,6 +110,8 @@ if (descuento === "cybermonday") {
     calcDescuentos = desc25(calculoTotal)
 } else if (descuento === "hFnfqu5") {
     calcDescuentos = desc50(calculoTotal)
+} else {
+    console.log("Codigo de descuento incorrecto. No aplica el descuento")
 }
 // calculo precio final
 precioFinal = calculoTotal - calcDescuentos
@@ -96,5 +120,5 @@ precioFinal = calculoTotal - calcDescuentos
 alert("RESUMEN DE COMPRA: \n * Duracion del servicio: " + duracion + "Mes/es = $" + costeMeses + "\n * Sistema operativo: " + sistema.toUpperCase() + "\n * Copia de seguridad: " + respaldo + " = $" + costeCopia + "\n * Certificado SSL: " + certOpcion + " = $" + costeCertificado + "/año \n \n SUBTOTAL: $" + subtotal + "\n--------------------------\n +IVA: $" + totalImp + "\n--------------------------\nTOTAL: $" + calculoTotal + "\n Descuentos : -" + calcDescuentos + "\n TOTAL A PAGAR: $" + precioFinal.toFixed(2))
 
 
-
+console.log (totales)
 
