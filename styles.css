@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body {
+    background-image: radial-gradient(circle, #f48c06, #f59f00, #f3b200, #f0c500, #ebd812);
+}
+
+h1 {
+    margin: 50px;
+
+    text-align: center;
+}
+
+.simuladorContenedor {
+    margin: 100px auto;
+    background-color: rgb(224, 224, 224);
+    box-shadow: 0px 0px 40px 0px rgb(255, 61, 2);
+    border-radius: 20px;
+    width: 900px;
+    height: 700px;
+    padding: 20px;
+}
+
+.simuladorContenedor h2 {
+    margin-bottom: 10px;
+}
+
+#resumen {
+    padding: 20px;
+    height: 90%;
+    border-radius: 20px;
+    background-color: rgb(247, 247, 247);
+}
+
+.resumenProductos {
+    /* border: 1px solid red; */
+    padding: 20px;
+    height: 40%;
+    margin-bottom: 5%;
+}
+
+.totales {
+    /* border: 1px solid rgb(0, 255, 42); */
+    border-top: 2px solid rgb(190, 179, 179);
+    padding: 20px;
+    height: 40%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+p{
+    padding: 3px;
+}
+.precioFinal{
+    padding-top: 15px;
+    font-size: larger;
+    font-weight: bolder;
+}
