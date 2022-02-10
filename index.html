@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Document</title>
 </head>
 
@@ -14,9 +16,67 @@
         <h1>Simulador de compra</h1>
     </header>
     <main>
-        
         <div class="simuladorContenedor">
-            <h2>Mi compra:</h2>
+
+            <div class="compra">
+                <h2>Mi compra:</h2>
+
+                <form id="formulario">
+                    <h3>Planes:</h3>
+                    <div class="planes inputContenedor">
+                        <div>
+                            <input id="plan1" name="plan" type="radio">
+                            <label for="Lite">Lite</label>
+                        </div>
+                        <div>
+                            <input id="plan2" name="plan" type="radio">
+                            <label for="Plus">Plus</label>
+                        </div>
+                        <div>
+                            <input id="plan3" name="plan" type="radio">
+                            <label for="full">Full</label>
+                        </div>
+                    </div>
+                    <h3>Duración:</h3>
+                    <div class="duracion inputContenedor">
+                        <div>
+                            <input id="duracion1" name="tiempo" type="radio">
+                            <label for="unMes">1 Mes</label>
+                        </div>
+                        <div>
+                            <input id="duracion2" name="tiempo" type="radio">
+                            <label for="seisMes">6 Meses</label>
+                        </div>
+                        <div>
+                            <input id="duracion3" name="tiempo" type="radio">
+                            <label for="doceMes">12 Meses</label>
+                        </div>
+                    </div>
+                    <h3>Sistema Operativo</h3>
+                    <div class="sistema inputContenedor">
+                        <div>
+                            <input id = "soLin" name="sistemaOp" type="radio">
+                            <label for="win">Linux</label>
+                        </div>
+                        <div>
+                            <input id = "soWin" name="sistemaOp" type="radio">
+                            <label for=";in">Windows</label>
+                        </div>
+
+                    </div>
+                    <h3>Certificado SSL:</h3>
+                    <div class="certSsl inputContenedor">
+                        <div>
+                            <input id= "ssl" name="certificadoSSL" type="checkbox" value="yes" >
+                            <label for="ssl">Agregar SSL</label>
+                        </div>
+
+                    </div>
+                    <button></button>
+                    <input id="btnSubmit" type="submit" value="Total">
+                </form>
+
+            </div>
             <div id="resumen">
 
                 <div class="resumenProductos">
@@ -33,7 +93,9 @@
 
 
 
-    <script src="DOM desafio/dom.js"></script>
+    <script src="eventos/resumen.js"></script>
+    
+
 </body>
 
 </html>
