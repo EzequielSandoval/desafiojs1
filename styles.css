@@ -104,13 +104,14 @@ p{
     border-bottom: 2px solid rgb(190, 179, 179);
 }
 
-
+.inputContenedor,
+.descuento textarea {
+    resize: none;
+}
 
 #btnSubmit{
     /* border: 2px solid black; */
     display: flex;
     margin: 30px auto;
-    height: 30px;
-    padding: auto;
-    width: 40px;
+    height: 40px;
 }
